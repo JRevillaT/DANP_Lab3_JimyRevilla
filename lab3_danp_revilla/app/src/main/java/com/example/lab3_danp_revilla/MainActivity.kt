@@ -95,11 +95,11 @@ fun pantallaUsuario(listaAsistentes: MutableList<Asistente>){
                     items(listaAsistentes){asistente ->
                         CardAsistente(
                             funNombre = {nombre = it},
-                            funFecha = {nombre = it},
-                            funTipoSangre = {nombre = it},
-                            funTelef = {nombre = it},
-                            funCorreo = {nombre = it},
-                            funMonto = {nombre = it},
+                            funFecha = {fecha = it},
+                            funTipoSangre = {tipoSangre = it},
+                            funTelef = {telef = it},
+                            funCorreo = {correo = it},
+                            funMonto = {monto = it},
 
                             funTxtBtn = {txtBtn = it},
                             funEstaEditando = {estaEditando= it},
