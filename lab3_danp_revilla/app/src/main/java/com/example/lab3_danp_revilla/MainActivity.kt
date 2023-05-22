@@ -103,8 +103,9 @@ fun pantallaUsuario(listaAsistentes: MutableList<Asistente>){
 
                             funTxtBtn = {txtBtn = it},
                             funEstaEditando = {estaEditando= it},
-                            funLimpiarInputs= {estaEditando= it},
-
+                            //funLimpiarInputs= {estaEditando= it},
+                            funBorrarAsistente = {borrarAsistente(it, listaAsistentes)},
+                            asistente = asistente
                         )
 
                     }
@@ -118,6 +119,28 @@ fun pantallaUsuario(listaAsistentes: MutableList<Asistente>){
 
 }
 
+fun agregarAsistente (nombre: String, fecha: String, tipoSangre: String, telef: String, correo: String, monto: String, listaAsistentes: MutableList<Asistente>){
+    listaAsistentes.add(Asistente(nombre, fecha, tipoSangre, telef, correo, monto))
+}
 
+fun editarAsistente(nombre: String, fecha: String, tipoSangre: String, telef: String, correo: String, monto: String, listaAsistentes: MutableList<Asistente>){
+    listaAsistentes.forEach { asistente ->
+        if ( asistente.nomCom == nombre ){
+            asistente.fecha == fecha
+            asistente.tipoSangre = tipoSangre
+            asistente.telef = telef
+            asistente.correo = correo
+            asistente.monto = monto
+        }
+    }
+}
+
+fun borrarAsistente(nombre: String, listaAsistentes: MutableList<Asistente>){
+    listaAsistentes.forEach { asistente ->
+        if(asistente.nomCom == nombre){
+            listaAsistentes.remove(asistente)
+        }
+    }
+}
 
 

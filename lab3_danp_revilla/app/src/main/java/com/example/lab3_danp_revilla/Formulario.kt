@@ -119,7 +119,7 @@ fun Formulario(
                 funEstaEditando()
 
             }else{
-                agregarUsuario(nombre, fecha, tipoSangre, telef, correo, monto, listaAsistentes)
+                agregarAsistente(nombre, fecha, tipoSangre, telef, correo, monto, listaAsistentes)
             }
             funLimpiarInputs()
         }) {
